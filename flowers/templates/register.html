@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Header - set the background image for the header in the line below-->
+<header class="py-5" >
+    <div class="text-center my-5">
+        <h1 class="text-black fs-3 fw-bolder">Register Your Account</h1>
+   
+
+
+        
+        
+    </div>
+</header>
+
+
+        <form method = "POST" action = "{% url 'register' %}">
+          {% csrf_token %}
+
+          {{ form.as_p }}
+
+
+
+          <button type="submit" class= "btn btn-secondary">
+            Register
+          </button>  
+        
+          
+        </form>
+    
+
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+
+ {% endblock %}
